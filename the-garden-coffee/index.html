@@ -4,73 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Garden Coffee | Demo Website</title>
-  <style>
-    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; background: #f6f3ed; }
-    * { box-sizing: border-box; }
-    body { margin: 0; }
-    a { color: inherit; }
-    .notice { background: #172033; color: white; font-size: 14px; padding: 10px 18px; text-align: center; }
-    .hero { min-height: 72vh; display: grid; place-items: center; padding: 72px 20px; background: linear-gradient(135deg, #fffaf0, #efe6d2); }
-    .hero-card { width: min(1040px, 100%); display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; }
-    .eyebrow { color: #9a6b2f; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; }
-    h1 { font-size: clamp(42px, 7vw, 82px); line-height: .94; margin: 14px 0; letter-spacing: -0.06em; }
-    p { color: #536071; font-size: 18px; line-height: 1.7; }
-    .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-    .button { border-radius: 999px; padding: 14px 20px; font-weight: 800; text-decoration: none; border: 1px solid #172033; }
-    .primary { background: #172033; color: white; }
-    .secondary { background: white; }
-    .visual { min-height: 420px; border-radius: 34px; background: radial-gradient(circle at top left, #ffffff 0, #ffffff 24%, #d6bea0 25%, #a86d39 58%, #172033 100%); box-shadow: 0 30px 90px rgba(23,32,51,.18); display: grid; place-items: end start; padding: 28px; overflow: hidden; }
-    .visual strong { color: white; font-size: 30px; line-height: 1.05; max-width: 340px; }
-    section { padding: 72px 20px; }
-    .wrap { width: min(1040px, 100%); margin: 0 auto; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
-    .card { background: white; border: 1px solid rgba(23,32,51,.09); border-radius: 24px; padding: 24px; box-shadow: 0 18px 45px rgba(23,32,51,.07); }
-    .card h3 { margin-top: 0; }
-    .contact { background: #172033; color: white; border-radius: 34px; padding: 36px; display: grid; gap: 14px; }
-    .contact p { color: #d6dce7; margin: 0; }
-    .contact a { color: white; font-weight: 800; }
-    footer { padding: 28px 20px; text-align: center; color: #667085; }
-    @media (max-width: 820px) { .hero-card, .grid { grid-template-columns: 1fr; } .visual { min-height: 280px; } }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="notice">Preview site designed for The Garden Coffee · demo content is placeholder · not yet live</div>
+  <div class="preview-bar">Preview site designed for The Garden Coffee · demo content is placeholder · not yet live</div>
+  <header class="site-header">
+    <a class="logo" href="#">The Garden Coffee</a>
+    <nav><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
   <main>
     <section class="hero">
-      <div class="hero-card">
-        <div>
-          <div class="eyebrow">Cafe</div>
-          <h1>The Garden Coffee</h1>
-          <p>A simple, modern website demo built to help local customers understand what you offer and contact you quickly.</p>
-          <div class="buttons">
-            <a class="button primary" href="tel:(480) 534-5457">Call now</a>
-            <a class="button secondary" href="#services">View services</a>
-          </div>
-        </div>
-        <div class="visual"><strong>The Garden Coffee — clear, local, and easy to contact.</strong></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Cafe</p>
+        <h1>The Garden Coffee — a polished local website demo</h1>
+        <p>A modern, mobile-friendly preview designed to help customers understand your services and contact you quickly.</p>
+        <div class="actions"><a class="button primary" href="#contact">Get in touch</a><a class="button secondary" href="#services">View services</a></div>
       </div>
+      <div class="hero-card"><span>Modern preview</span><strong>Built to turn visitors into calls, messages, and bookings.</strong></div>
     </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="eyebrow">Website plan</div>
-        <h2>Built around what customers need first.</h2>
-        <div class="grid">
-          <article class="card"><h3>Hero</h3><p>Hero: The Garden Coffee — a cleaner way to show up online</p></article><article class="card"><h3>Subheadline</h3><p>Subheadline: A modern demo website for a cafe that makes services easy to understand and gives customers a quick path to call, message, or book.</p></article><article class="card"><h3>Primary CTA</h3><p>Primary CTA: Call Now</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap contact">
-        <div class="eyebrow">Contact</div>
-        <h2>Ready to turn visitors into calls.</h2>
-        <p>Phone: <a href="tel:(480) 534-5457">(480) 534-5457</a></p>
-        <p>Email: <a href="mailto: thegardencoffeeonbell@gmail.com"> thegardencoffeeonbell@gmail.com</a></p>
-        <p>Instagram: thegardencoffeeonbell</p>
-        
-      </div>
-    </section>
+    <section id="services" class="section"><p class="eyebrow">Services</p><h2>Everything customers need to know at a glance.</h2><div class="cards"><article><h3>Clear services</h3><p>Easy-to-scan cards explain what you offer.</p></article><article><h3>Local trust</h3><p>Prominent contact details and credibility cues help visitors feel confident.</p></article><article><h3>Fast contact</h3><p>Simple calls-to-action make it easy to reach out.</p></article></div></section>
+    <section id="about" class="split"><div><p class="eyebrow">About</p><h2>A stronger first impression online.</h2></div><p>The Garden Coffee is presented as a trustworthy local cafe with a clean, professional website experience.</p></section>
+    <section id="contact" class="cta"><p class="eyebrow">Contact</p><h2>Ready to turn visitors into customers?</h2><p>This demo can be customized with real photos, services, booking, forms, and colors.</p></section>
   </main>
   <footer>Demo generated by Crafted Digital Mini OS.</footer>
 </body>
